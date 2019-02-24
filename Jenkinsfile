@@ -1,6 +1,8 @@
 pipeline {
   agent none
-
+  triggers {
+    pollSCM('') // Enabling being build on Push
+  }
   environment {
     MAJOR_VERSION = 1
   }
